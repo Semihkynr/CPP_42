@@ -6,7 +6,7 @@
 /*   By: skaynar <skaynar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/05 14:34:55 by skaynar           #+#    #+#             */
-/*   Updated: 2025/10/26 17:28:42 by skaynar          ###   ########.fr       */
+/*   Updated: 2025/10/26 20:48:05 by skaynar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,7 @@ std::string PhoneBook::getNonEmptyInput(std::string prompt) {
     do {
         std::cout << prompt;
         std::getline(std::cin, input);
-        if (input.empty()) {
-            std::cout << "Field cannot be empty. Please try again." << std::endl;
-        }
+        if (input.empty()) {std::cout << "Field cannot be empty. Please try again." << std::endl;}
     } while (input.empty());
     return input;
 }
