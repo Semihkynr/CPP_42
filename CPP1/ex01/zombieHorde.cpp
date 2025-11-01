@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skaynar <skaynar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 15:29:59 by skaynar           #+#    #+#             */
-/*   Updated: 2025/11/01 17:31:23 by skaynar          ###   ########.fr       */
+/*   Created: 2025/11/01 17:38:09 by skaynar           #+#    #+#             */
+/*   Updated: 2025/11/01 18:06:26 by skaynar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
+#include "Zombie.hpp"
 
-#include <string>
-#include <iostream>
-
-class Zombie
-{
-    private: 
-        std::string name;
-    public:
-        Zombie(std::string name);
-        std::string getName();
-        void setName(std::string newName);
-        void announce( void );
-};
-void randomChump( std::string name );
-Zombie* newZombie( std::string name );
-
-#endif
+Zombie* zombieHorde( int N, std::string name ){
+    Zombie *myZombie = new Zombie[N];
+    for (int i = 0; i < N; i++)
+    {myZombie[i].setName(name);}
+    return (myZombie);
+}

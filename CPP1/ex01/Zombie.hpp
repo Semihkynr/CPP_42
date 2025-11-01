@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: skaynar <skaynar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 15:29:59 by skaynar           #+#    #+#             */
-/*   Updated: 2025/11/01 17:31:23 by skaynar          ###   ########.fr       */
+/*   Created: 2025/11/01 17:35:04 by skaynar           #+#    #+#             */
+/*   Updated: 2025/11/01 17:58:03 by skaynar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef ZOMBIE_HPP
 #define ZOMBIE_HPP
@@ -22,11 +23,12 @@ class Zombie
         std::string name;
     public:
         Zombie(std::string name);
+        Zombie();
         std::string getName();
         void setName(std::string newName);
-        void announce( void );
+        void announce();
 };
-void randomChump( std::string name );
+Zombie* zombieHorde( int N, std::string name );
 Zombie* newZombie( std::string name );
 
 #endif

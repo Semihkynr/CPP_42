@@ -1,32 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skaynar <skaynar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 15:29:59 by skaynar           #+#    #+#             */
-/*   Updated: 2025/11/01 17:31:23 by skaynar          ###   ########.fr       */
+/*   Created: 2025/11/01 23:57:15 by skaynar           #+#    #+#             */
+/*   Updated: 2025/11/01 23:57:51 by skaynar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
-
-#include <string>
-#include <iostream>
-
-class Zombie
-{
-    private: 
-        std::string name;
-    public:
-        Zombie(std::string name);
-        std::string getName();
-        void setName(std::string newName);
-        void announce( void );
-};
-void randomChump( std::string name );
-Zombie* newZombie( std::string name );
-
-#endif
+void debug( void );
+void info( void );
+void warning( void );
+void error( void );

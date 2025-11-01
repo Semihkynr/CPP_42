@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skaynar <skaynar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 15:29:59 by skaynar           #+#    #+#             */
-/*   Updated: 2025/11/01 17:31:23 by skaynar          ###   ########.fr       */
+/*   Created: 2025/11/01 17:35:13 by skaynar           #+#    #+#             */
+/*   Updated: 2025/11/01 18:07:33 by skaynar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
+#include "Zombie.hpp"
 
-#include <string>
-#include <iostream>
-
-class Zombie
+int main()
 {
-    private: 
-        std::string name;
-    public:
-        Zombie(std::string name);
-        std::string getName();
-        void setName(std::string newName);
-        void announce( void );
-};
-void randomChump( std::string name );
-Zombie* newZombie( std::string name );
-
-#endif
+    Zombie* Zomsu = zombieHorde(11,"Zomsu");
+    
+    for(int i = 0; i < 11; i++)
+    {
+        std::cout <<"Zombi "<< i+1<<std::endl;
+        Zomsu[i].announce();
+    }
+    delete [] Zomsu;
+}
