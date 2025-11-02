@@ -14,7 +14,7 @@
 
 HumanA::HumanA(std::string name, Weapon &weapon) : weapon(weapon)
 {this->name = name;}
-void HumanA::setName(std::string name){name = name;}
+void HumanA::setName(std::string name){this->name = name;}
 std::string HumanA::getName(){return name;}
 void HumanA::setWeapon(Weapon &weapon) {this->weapon = weapon;}
 

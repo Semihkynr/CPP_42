@@ -12,8 +12,8 @@
 
 #include "HumanB.hpp"
 
-void HumanB::setName(std::string name){name = name;}
-std::string HumanB::getName(){return name;}
+void HumanB::setName(std::string name){this->name = name;}
+const std::string& HumanB::getName(){return name;}
 HumanB::HumanB(std::string name){this->name = name;}
 void HumanB::setWeapon(Weapon &weapon){this->weapon = &weapon;}
 
