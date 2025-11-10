@@ -6,7 +6,7 @@
 /*   By: skaynar <skaynar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 11:53:20 by skaynar           #+#    #+#             */
-/*   Updated: 2025/11/10 14:12:08 by skaynar          ###   ########.fr       */
+/*   Updated: 2025/11/10 17:04:41 by skaynar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ std::ostream& operator<<(std::ostream& os, const Fixed& fixed){os << fixed.toFlo
 Fixed	Fixed::operator/(const Fixed& num)
 {
 	Fixed tmp;
-	tmp.fixedPointValue = this->fixedPointValue / num.fixedPointValue * (1 << this->fractionalBits);
+	tmp.fixedPointValue = (float)this->fixedPointValue / (float)num.fixedPointValue * (1 << this->fractionalBits);
 	return tmp;
 }
 Fixed	Fixed::operator*(const Fixed& num)
