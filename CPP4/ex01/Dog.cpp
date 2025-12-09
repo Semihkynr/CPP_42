@@ -6,7 +6,7 @@
 /*   By: skaynar <skaynar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 11:49:20 by skaynar           #+#    #+#             */
-/*   Updated: 2025/12/08 11:51:28 by skaynar          ###   ########.fr       */
+/*   Updated: 2025/12/08 12:28:33 by skaynar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ Dog& Dog::operator=(const Dog& other){
 	return *this;}
 Dog::~Dog() {delete this->brain;
 	std::cout << "Dog destructor called" << std::endl;}
-void Dog::makeSound() const{std::cout << "Woof!" << std::endl;}
+void Dog::makeSound() const{std::cout << "HAV!" << std::endl;}
 Brain* Dog::getBrain() const {return this->brain;}
