@@ -1,4 +1,4 @@
-NAME = animal
+NAME = ex03
 
 CXXFLAGS=-Wall -Wextra -Werror -std=c++98
 
