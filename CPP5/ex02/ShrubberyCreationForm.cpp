@@ -6,7 +6,7 @@
 /*   By: skaynar <skaynar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 16:59:55 by skaynar           #+#    #+#             */
-/*   Updated: 2026/02/18 17:08:46 by skaynar          ###   ########.fr       */
+/*   Updated: 2026/02/21 13:28:42 by skaynar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,6 @@ void ShrubberyCreationForm::executeAction() const {
     outfile << "                     |    |" << std::endl;
     outfile << "--------------------/ ,  . \\--------" << std::endl;
 
-    outfile.close(); // Dosyayı kapatmayı unutmuyoruz
+    outfile.close();
     std::cout << "Shrubbery has been planted in " << filename << std::endl;
 }
