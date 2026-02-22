@@ -6,7 +6,7 @@
 /*   By: skaynar <skaynar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:07:58 by skaynar           #+#    #+#             */
-/*   Updated: 2026/02/08 15:14:27 by skaynar          ###   ########.fr       */
+/*   Updated: 2026/02/22 11:34:08 by skaynar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,25 +17,22 @@
 
 class Form {
     private:
-        const std::string   name;
-        bool                _signed;
-        const int           reqSign;
-        const int           reqExec;
+        const std::string name;
+        bool _signed;
+        const int reqSign;
+        const int reqExec;
 
     public:
         Form(const std::string name, int signRank, int execRank);
         Form(const Form& src);
         Form& operator=(const Form& rhs);
         ~Form();
-
-        // Getters
-        const std::string   getName() const;
-        bool                get_signed() const;
-        int                 getReqSign() const;
-        int                 getReqExec() const;
-
-        void                be_signed(const Bureaucrat& b);
-
+        const std::string getName() const;
+        bool get_signed() const;
+        int getReqSign() const;
+        int getReqExec() const;
+        void be_signed(const Bureaucrat& b);
+        
         class GradeTooHighException : public std::exception {
             public: virtual const char* what() const throw();
         };
@@ -43,7 +40,6 @@ class Form {
             public: virtual const char* what() const throw();
         };
 };
-
 std::ostream& operator<<(std::ostream& out, const Form& obj);
 
 #endif

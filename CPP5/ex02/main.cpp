@@ -6,7 +6,7 @@
 /*   By: skaynar <skaynar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 16:59:41 by skaynar           #+#    #+#             */
-/*   Updated: 2026/02/18 17:09:16 by skaynar          ###   ########.fr       */
+/*   Updated: 2026/02/22 13:15:20 by skaynar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,11 @@ int main() {
         std::cout << bahcivan << std::endl;
         std::cout << f1 << std::endl;
 
-        bahcivan.signForm(f1);      // 140 <= 145 (İmzalar)
-        bahcivan.executeForm(f1);   // 140 > 137 (ÇALIŞTIRAMAZ - Hata vermeli)
-        
-        // Terfi ettirelim
+        bahcivan.signForm(f1);
+        bahcivan.executeForm(f1);
         for (int i = 0; i < 5; i++) bahcivan.promote(); 
         std::cout << "Terfi sonrası: " << bahcivan << std::endl;
-        bahcivan.executeForm(f1);   // 135 <= 137 (Artık çalıştırır)
+        bahcivan.executeForm(f1);
     }
     catch (std::exception &e) {
         std::cerr << "Beklenmedik hata: " << e.what() << std::endl;
@@ -47,9 +45,10 @@ int main() {
         Bureaucrat tech("Teknisyen", 40);
         RobotomyRequestForm f2("Müşteri_1");
 
+        std::cout << f2 << std::endl;
         tech.signForm(f2);
-        tech.executeForm(f2); // %50 şansla başarılı/başarısız
-        tech.executeForm(f2); // Tekrar deneyelim
+        tech.executeForm(f2);
+        tech.executeForm(f2);
     }
     catch (std::exception &e) {
         std::cerr << e.what() << std::endl;
@@ -58,13 +57,12 @@ int main() {
     std::cout << "\n===== TEST 3: Presidential Pardon (Af) =====" << std::endl;
     try {
         Bureaucrat boss("Cumhurbaşkanı", 4);
-        PresidentialPardonForm f3("Suçlu_Cemil");
-
-        // İmzasız çalıştırmayı deneyelim
-        boss.executeForm(f3); 
+        PresidentialPardonForm f3("Suçlu Cemil");
         
+        std::cout << f3 << std::endl;
+        boss.executeForm(f3); 
         boss.signForm(f3);
-        boss.executeForm(f3); // Şimdi çalışmalı
+        boss.executeForm(f3);
     }
     catch (std::exception &e) {
         std::cerr << e.what() << std::endl;
@@ -74,9 +72,10 @@ int main() {
     try {
         Bureaucrat intern("Stajyer", 150);
         PresidentialPardonForm f4("Mahkum");
-
-        intern.signForm(f4);    // 150 > 25 (İmzalayamaz)
-        intern.executeForm(f4); // İmzasız olduğu için direkt "NotSigned" hatası verir
+        
+        std::cout << f4 << std::endl;
+        intern.signForm(f4);
+        intern.executeForm(f4);
     }
     catch (std::exception &e) {
         std::cerr << "Yakalanan Hata: " << e.what() << std::endl;

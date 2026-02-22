@@ -6,7 +6,7 @@
 /*   By: skaynar <skaynar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 13:33:13 by skaynar           #+#    #+#             */
-/*   Updated: 2026/02/21 13:33:26 by skaynar          ###   ########.fr       */
+/*   Updated: 2026/02/22 13:28:28 by skaynar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ Intern& Intern::operator=(const Intern& other) { (void)other; return *this; }
 Intern::~Intern() {}
 
 AForm* Intern::makeForm(std::string formName, std::string target) {
-    // Geçerli form isimlerini bir dizide tutuyoruz
     std::string formNames[] = {
         "shrubbery creation",
         "robotomy request",
@@ -42,7 +41,6 @@ AForm* Intern::makeForm(std::string formName, std::string target) {
             std::cout << "Error: Intern cannot create " << formName << " because it doesn't exist." << std::endl;
             return NULL;
     }
-    
     std::cout << "Intern creates " << result->getName() << std::endl;
     return result;
 }

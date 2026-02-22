@@ -6,7 +6,7 @@
 /*   By: skaynar <skaynar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 16:59:36 by skaynar           #+#    #+#             */
-/*   Updated: 2026/02/13 17:01:52 by skaynar          ###   ########.fr       */
+/*   Updated: 2026/02/22 13:07:28 by skaynar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class AForm;
 
 class Bureaucrat {
     private:
-        int               grade;
+        int grade;
         const std::string name;
         Bureaucrat();
     public:

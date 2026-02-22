@@ -6,7 +6,7 @@
 /*   By: skaynar <skaynar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 14:37:34 by skaynar           #+#    #+#             */
-/*   Updated: 2026/02/07 17:01:34 by skaynar          ###   ########.fr       */
+/*   Updated: 2026/02/22 11:17:42 by skaynar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ private:
     int grade;
 
 public:
-    Bureaucrat(); 
     Bureaucrat(const std::string name, int grade);
     Bureaucrat(const Bureaucrat& other);
     Bureaucrat& operator=(const Bureaucrat& other);

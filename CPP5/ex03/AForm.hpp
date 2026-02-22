@@ -6,7 +6,7 @@
 /*   By: skaynar <skaynar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 16:47:45 by skaynar           #+#    #+#             */
-/*   Updated: 2026/02/13 17:03:37 by skaynar          ###   ########.fr       */
+/*   Updated: 2026/02/22 13:24:55 by skaynar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "Bureaucrat.hpp"
 #include <iostream>
 
-class Bureaucrat; // Forward declaration
+class Bureaucrat;
 
 class AForm {
     private:

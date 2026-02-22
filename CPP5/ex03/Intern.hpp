@@ -6,7 +6,7 @@
 /*   By: skaynar <skaynar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 13:33:03 by skaynar           #+#    #+#             */
-/*   Updated: 2026/02/21 13:33:04 by skaynar          ###   ########.fr       */
+/*   Updated: 2026/02/22 13:24:33 by skaynar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ class Intern {
         Intern(const Intern& other);
         Intern& operator=(const Intern& other);
         ~Intern();
-
-        // Form fabrikası: İsme göre doğru formu yaratır
         AForm* makeForm(std::string formName, std::string target);
 };
 

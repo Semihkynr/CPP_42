@@ -6,7 +6,7 @@
 /*   By: skaynar <skaynar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 16:59:55 by skaynar           #+#    #+#             */
-/*   Updated: 2026/02/21 13:28:42 by skaynar          ###   ########.fr       */
+/*   Updated: 2026/02/22 13:04:31 by skaynar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,26 +19,20 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& other)
     : AForm(other), target(other.target) {}
 
 ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& other) {
-    (void)other; // name ve target const olduğu için bir şey kopyalanamaz
+    (void)other;
     return *this;
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm() {}
 
 void ShrubberyCreationForm::executeAction() const {
-    // Dosya adını hazırlıyoruz: hedef_shrubbery
     std::string filename = this->target + "_shrubbery";
-    
-    // std::ofstream ile dosyayı açıyoruz. 
-    // .c_str() kullanıyoruz çünkü C++98'de open() fonksiyonu std::string kabul etmez.
     std::ofstream outfile(filename.c_str());
 
     if (!outfile.is_open()) {
         std::cerr << "Error: Could not open the file for writing!" << std::endl;
-        return;
-    }
+        return;}
 
-    // Dosyanın içine o meşhur ağaçlarımızı çiziyoruz
     outfile << "              v .   ._, |_  .," << std::endl;
     outfile << "           `-._\\/  .  \\ /    |/_" << std::endl;
     outfile << "               \\  \\, y | \\//" << std::endl;

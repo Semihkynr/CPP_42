@@ -6,7 +6,7 @@
 /*   By: skaynar <skaynar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 16:49:07 by skaynar           #+#    #+#             */
-/*   Updated: 2026/02/13 17:03:31 by skaynar          ###   ########.fr       */
+/*   Updated: 2026/02/22 12:51:17 by skaynar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ const std::string AForm::getName() const { return this->name; }
 bool AForm::getIsSigned() const { return this->isSigned; }
 int AForm::getGradeToSign() const { return this->gradeToSign; }
 int AForm::getGradeToExec() const { return this->gradeToExec; }
+
 void AForm::beSigned(const Bureaucrat& b) {
     if (b.getGrade() > this->gradeToSign)
         throw AForm::GradeTooLowException();

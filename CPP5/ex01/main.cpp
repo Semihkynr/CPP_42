@@ -6,7 +6,7 @@
 /*   By: skaynar <skaynar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/08 15:08:19 by skaynar           #+#    #+#             */
-/*   Updated: 2026/02/08 15:08:21 by skaynar          ###   ########.fr       */
+/*   Updated: 2026/02/22 12:50:32 by skaynar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ int main() {
     std::cout << topSecret << std::endl;
 
     std::cout << "\n--- SIGNING PROCESS ---" << std::endl;
-    intern.signForm(a3);       // Stajyer kahve makinesi isteğini imzalayamayabilir (145 > 140)
-    boss.signForm(topSecret);  // Patron her şeyi imzalar
-    intern.signForm(topSecret); // Stajyer nükleer kodları asla imzalayamaz
+    intern.signForm(a3);
+    boss.signForm(topSecret);
+    intern.signForm(topSecret);
 
     std::cout << "\n--- FINAL STATUS ---" << std::endl;
     std::cout << a3 << std::endl;
