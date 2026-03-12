@@ -6,7 +6,7 @@
 /*   By: skaynar <skaynar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 16:59:41 by skaynar           #+#    #+#             */
-/*   Updated: 2026/02/22 13:22:54 by skaynar          ###   ########.fr       */
+/*   Updated: 2026/02/21 13:33:45 by skaynar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
-#include <ctime>
-#include <cstdlib>
+#include <ctime>   // time() için
+#include <cstdlib> // srand() için
 
 #include "Bureaucrat.hpp"
 #include "Intern.hpp"
@@ -31,11 +31,15 @@ int main() {
     if (rrf) {
         boss.signForm(*rrf);
         boss.executeForm(*rrf);
-        delete rrf;
+        delete rrf; // Hafızayı temizliyoruz
     }
+
     std::cout << "\n--- TEST 2: Geçersiz Form ---" << std::endl;
     AForm* unknown;
     unknown = someRandomIntern.makeForm("kahve istegi", "Mutfak");
-    if (unknown) {delete unknown;}
+    if (unknown) {
+        delete unknown;
+    }
+
     return 0;
 }
