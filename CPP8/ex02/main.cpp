@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skaynar <skaynar@student.42istanbul.com    +#+  +:+       +#+        */
+/*   By: skaynar <skaynar@student.42istanbul.com.tr>+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/23 14:38:59 by skaynar           #+#    #+#             */
-/*   Updated: 2026/06/10 00:00:00 by skaynar          ###   ########.fr       */
+/*   Updated: 2026/06/17 10:49:27 by skaynar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 #include <list>
 
 int main() {
-    // --- Subject'in ornegi: MutantStack ---
     MutantStack<int> mstack;
     mstack.push(5);
     mstack.push(17);
@@ -26,21 +25,16 @@ int main() {
     mstack.push(5);
     mstack.push(737);
     mstack.push(0);
-
     MutantStack<int>::iterator it  = mstack.begin();
     MutantStack<int>::iterator ite = mstack.end();
     ++it;
     --it;
     while (it != ite) {
         std::cout << *it << std::endl;
-        ++it;
-    }
+        ++it;}
     std::stack<int> s(mstack);
     (void)s;
-
     std::cout << "---" << std::endl;
-
-    // --- Ayni seyi std::list ile: cikti ayni olmali ---
     std::list<int> lst;
     lst.push_back(5);
     lst.push_back(17);
@@ -51,15 +45,11 @@ int main() {
     lst.push_back(5);
     lst.push_back(737);
     lst.push_back(0);
-
     std::list<int>::iterator lit  = lst.begin();
     std::list<int>::iterator lite = lst.end();
     ++lit;
     --lit;
     while (lit != lite) {
         std::cout << *lit << std::endl;
-        ++lit;
-    }
-
-    return 0;
-}
+        ++lit;}
+    return 0;}
